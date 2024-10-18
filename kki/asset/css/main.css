@@ -1,0 +1,511 @@
+/* General Body Styling */
+body {
+    font-family: 'Poppins', sans-serif; /* Perbaikan typo dari 'Poopins' ke 'Poppins' */
+    padding-top: 80px; /* Sesuaikan dengan tinggi navbar */
+}
+
+/* Hero Section */
+.hero {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color: white;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Opacity background lebih halus */
+    z-index: 1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Service Card */
+.service-menu .service-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    padding: 40px; /* Tambahkan padding untuk ukuran lebih besar */
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column; /* Menyusun konten secara vertikal */
+    align-items: center; /* Pusatkan konten */
+    text-align: center; /* Teks di tengah */
+    height: 200px; /* Tetapkan tinggi tetap untuk setiap kartu */
+    width: 100%; /* Lebar 100% dari kolom */
+    max-width: 300px; /* Maksimum lebar kartu */
+    margin: 0 auto; /* Pusatkan kartu dalam kolom */
+}
+
+.service-menu .service-card:hover {
+    background-color: #b4b4b4; /* Ubah warna latar belakang saat di-hover */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan yang lebih besar */
+    transform: scale(1.05); /* Skala sedikit lebih besar saat di-hover */
+}
+
+/* Ikon */
+.service-menu .service-card img {
+    width: 100px; /* Ukuran ikon yang lebih besar */
+    height: auto; /* Tinggi otomatis untuk menjaga proporsi */
+    margin-bottom: 15px; /* Spasi antara ikon dan teks */
+}
+
+/* Responsive Adjustment for Small Screens */
+@media (max-width: 768px) {
+    .service-card {
+        margin-bottom: 20px;
+        height: auto; /* Tinggi otomatis untuk perangkat kecil */
+        width: 100%; /* Lebar 100% */
+    }
+}
+
+/* Service Text */
+.service-menu h4 {
+    font-weight: bold;
+    color: #333;
+}
+
+
+/* Statistics Section */
+.stats-card {
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 42px;
+    padding-bottom: 127px;
+}
+
+.stats-button {
+    background-color: #b180f4;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 15px;
+    width: 80%; /* Atur lebar tombol ke 80% dari lebar kolom */
+    margin: 10px auto; /* Pusatkan tombol dan beri jarak atas dan bawah */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    display: block; /* Pastikan tombol tampil sebagai block untuk margin auto */
+    min-height: 50px; /* Tinggi minimum tombol */
+    line-height: 3.5; /* Atur line-height untuk memperbaiki teks di dalam tombol */
+}
+
+.stats-button:hover {
+    transform: scale(1.05);
+    background-color: #9b68e4;
+}
+
+
+/* Row styling to ensure equal spacing */
+.row {
+    margin-bottom: 15px; /* Tambahkan margin bawah untuk jarak antara baris */
+}
+
+/* Tambahan CSS untuk memastikan tombol tidak bersebelahan */
+.row > div {
+    display: flex; /* Menggunakan flexbox untuk mengatur tata letak */
+    flex-direction: column; /* Tombol dalam kolom */
+}
+
+/* Menghapus margin bottom terakhir pada tombol terakhir di setiap kolom */
+.row > div:last-child > button:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Survey Section */
+.survey-section {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.survey-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-survey {
+    background-color: #e0e0e0;
+    color: black;
+    border-radius: 8px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-survey:hover {
+    background-color: #cfcfcf;
+}
+
+/* Navbar Styling */
+.navbar {
+    background: linear-gradient(90deg, #b180f4, #5a0080) !important;
+    border-bottom: 20px solid #730199;
+    padding: 15px;
+}
+
+.navbar-nav .nav-item {
+    position: relative;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    background-color: transparent;
+    border: 2px solid transparent;
+}
+
+.navbar-nav .nav-item:hover .nav-link {
+    background-color: #750799b5;
+    color: white;
+    border: 2px solid white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-nav .nav-item .nav-link.active {
+    background-color: #750799b5;
+    color: white;
+}
+
+.dropdown-menu {
+    background-color: #750799b5 !important;
+}
+
+.dropdown-menu .dropdown-item {
+    color: white;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #750799b5;
+    color: white;
+}
+
+/* Page Title */
+.page-title {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+}
+
+.heading h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.heading h3 {
+    font-size: 24px;
+    margin-top: 10px;
+    color: #6c757d;
+}
+
+/* Page Post */
+.page-post {
+    padding: 30px 0;
+}
+
+.post img {
+    max-width: 1600px;
+    width: 100%;
+    height: auto;
+    border: 2px solid #dee2e6;
+    border-radius: 10px;
+}
+
+/* Profile Section */
+.profile-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.survey-section img {
+    max-width: 100%;
+    height: auto;
+}
+
+.survey-result h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #5a0080;
+}
+
+.survey-result .progress {
+    background-color: #ebebeb;
+    border-radius: 8px;
+}
+
+.survey-result .progress-bar {
+    font-weight: bold;
+    text-align: center;
+}
+
+#surveyButton {
+    background-color: #b180f4;
+    color: white;
+    border-radius: 8px;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+
+#surveyButton:hover {
+    background-color: #5a0080;
+}
+
+
+/* news */
+.news-section {
+    padding-top: 20px;
+    padding-bottom: 2px;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tiga kolom sama rata */
+    gap: 20px; /* Jarak antar item */
+    align-items: start; /* Pastikan item sejajar di bagian atas */
+}
+
+.news-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Agar gambar dan teks berada di tengah */
+}
+
+.news-item img {
+    width: 100%; /* Gambar memenuhi lebar kotak */
+    height: auto;
+    border-radius: 8px;
+}
+
+.news-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #333;
+}
+
+.news-date {
+    font-size: 12px;
+    color: #6c757d;
+}
+
+.more-news {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #007bff;
+    cursor: pointer;
+}
+
+.more-news:hover {
+    text-decoration: underline;
+}
+
+.carousel-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.carousel-control {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Footer Section Styling */
+.footer {
+    background-color: #d7d7d7b5; /* Warna latar footer */
+    color: #333;
+    padding-top: 50px 0; /* Ruang atas dan bawah */
+    margin-top: 70px;
+}
+
+.footer .container {
+    max-width: 1475px;
+    margin: 0 auto;
+}
+
+.footer img {
+    width: 351px;
+    height: 98px;
+    margin-bottom: 20px;
+}
+
+.footer h4, .footer h5 {
+    color: #040404; /* Warna ungu untuk heading */
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.footer p {
+    font-size: 0.9rem;
+    color: #333;
+    margin: 5px 0;
+}
+
+/* Styling untuk bagian kontak */
+.footer .contact-info i {
+    color: #730199; /* Ikon berwarna ungu */
+    margin-right: 10px;
+}
+
+.footer .contact-info {
+    margin-top: 15px;
+}
+
+.footer .contact-info p {
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.footer .fab, .footer .fas {
+    margin-right: 10px;
+}
+
+/* Jam Pelayanan */
+.footer p strong {
+    color: #000000; /* Teks merah untuk tulisan LIBUR */
+}
+
+/* Footer Top */
+.footer-top {
+    background-color: #730199; /* Warna ungu untuk bagian atas footer */
+    padding: 10px 0;
+    margin-bottom: 50px;
+}
+
+/* Footer Middle */
+.footer-middle {
+    padding: 20px 0; /* Padding untuk bagian tengah footer */
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    background-color: #313131d2; /* Warna hitam transparan untuk bagian bawah */
+    color: white; /* Warna teks putih */
+    text-align: center; /* Teks rata tengah */
+    padding: 10px 0; /* Padding untuk bagian bawah footer */
+    font-size: 0.85rem; /* Ukuran font lebih kecil */
+    font-family: 'Poppins', sans-serif; /* Font Poppins */
+    margin-top: 50px;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .footer {
+        padding: 30px 0; /* Padding tambahan untuk footer di perangkat kecil */
+    }
+
+    .footer h4, .footer h5 {
+        font-size: 1.2rem; /* Ukuran font lebih besar untuk heading */
+    }
+
+    .contact-info i {
+        margin-right: 5px; /* Spasi antara ikon dan teks */
+    }
+}
+
+/*pencatatan soial*/
+.akta-section {
+    padding: 30px;
+    padding-left: 70px;
+    padding-right: 70px;
+    background-color: #f8f9fa;
+}
+
+.akta-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.akta-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    width: 30%; /* Ukuran setiap item */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.akta-item img {
+    width: 150px; /* Sesuaikan ukuran gambar */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.dropdown-button {
+    background-color: transparent;
+    border: none;
+    color: #007bff;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.dropdown-button:hover {
+    text-decoration: underline;
+}
+
+.dropdown-content {
+    display: none; /* Tersembunyi secara default */
+    margin-top: 10px;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-content p {
+    margin: 5px 0;
+}
+
+.download-section {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+}
+
+.download-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.download-link:hover {
+    text-decoration: underline;
+}
+
+
